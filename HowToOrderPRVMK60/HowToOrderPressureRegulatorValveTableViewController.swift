@@ -9,7 +9,8 @@
 import UIKit
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
-
+    var comodin: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,17 +29,17 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return howToOrderValves.count
+            return comodin.count
         } else {
             return 0
         }
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellSelection" , for: indexPath)
-        let valve = howToOrderValves[indexPath.row]
+        let valve = comodin[indexPath.row]
         cell.showsReorderControl = true
-        cell.textLabel?.text = "\(valve.model.feature)"
-        cell.detailTextLabel?.text = valve.model.feature
+        cell.textLabel?.text = ""
+        cell.detailTextLabel?.text = ""
         
         return cell
     }
@@ -46,8 +47,8 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         //tableView.deselectRow(at: indexPath, animated: true)
         let const = indexPath.row
         print(const)
-        let valve = howToOrderValves[indexPath.row]
-        print("\(valve.model) \(valve.model.feature)")
+        let valve = comodin[indexPath.row]
+        print("")
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
         }
@@ -58,13 +59,13 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         }
     }
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let movedValve = howToOrderValves.remove(at: sourceIndexPath.row)
-        howToOrderValves.insert(movedValve, at: destinationIndexPath.row)
+        let movedValve = comodin.remove(at: sourceIndexPath.row)
+        comodin.insert(movedValve, at: destinationIndexPath.row)
         tableView.reloadData()
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            howToOrderValves.remove(at: indexPath.row)
+            comodin.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .top)
         }
     }

@@ -8,12 +8,17 @@
 import Foundation
 import UIKit
 
-struct HowToOrderValve {
+class HowToOrderValve {
     var model: Model
     var size: Size
     var bodyMaterial: BodyMaterial
+    
+    init(model: Model, size: Size, bodyMaterial: BodyMaterial) {
+        self.model = model
+        self.size = size
+        self.bodyMaterial = bodyMaterial
+    }
 }
-
 
 var howToOrderValves: [HowToOrderValve] = [
     HowToOrderValve(model: .Standard, size: .ThreeOctave, bodyMaterial: .Bronze),
@@ -21,7 +26,6 @@ var howToOrderValves: [HowToOrderValve] = [
     HowToOrderValve(model: .LargeDiaphragm, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
     HowToOrderValve(model: .QuickChange, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
 ]
-let valveUno = HowToOrderValve(model: .Standard, size: .ThreeOctave, bodyMaterial: .Bronze)
 
 
 

@@ -36,4 +36,12 @@ enum Size: String {
         case .four: return "4 inch (DN100) (MK60/60HP only)"
         }
     }
+    func getAllSizes() -> [String] {
+        let arrayOfSizes = [  Size.oneQuarter.feature,
+                              Size.ThreeOctave.feature,
+                              Size.oneAndHalf.feature,
+                              Size.threeQuarter.feature]
+        return arrayOfSizes
+        
+    }
 }

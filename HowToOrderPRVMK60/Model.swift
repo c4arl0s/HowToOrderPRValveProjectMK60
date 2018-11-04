@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Model: String {
+enum Model: String  {
     case Standard = "60"
     case HighPressure = "60HP"
     case QuickChange = "60QC"
@@ -23,12 +23,11 @@ enum Model: String {
         case .LargeDiaphragm: return "Large Diaphragm 61"
         }
     }
+    func getAllModels() -> [String] {
+        let arrayOfModels = [ Model.Standard.feature,
+                              Model.HighPressure.feature,
+                              Model.QuickChange.feature,
+                              Model.LargeDiaphragm.feature]
+        return arrayOfModels
+    }
 }
-
-var arrayOfModels: [Model] = [
-    Model(rawValue: Model.Standard.feature)!,
-    Model(rawValue: Model.HighPressure.feature)!,
-    Model(rawValue: Model.QuickChange.feature)!,
-    Model(rawValue: Model.LargeDiaphragm.feature)!
-]
-

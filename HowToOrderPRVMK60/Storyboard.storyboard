@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="330" y="-35"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation-->
         <scene sceneID="Exl-9b-QGI">
             <objects>
-                <navigationController id="IwU-pE-Qrq" sceneMemberID="viewController">
+                <navigationController title="Navigation" id="IwU-pE-Qrq" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tEs-qY-NFa">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
