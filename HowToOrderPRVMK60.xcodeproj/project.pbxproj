@@ -111,18 +111,11 @@
 		8F3A276E21671F9D0019A579 /* HowToOrderPRVMK60 */ = {
 			isa = PBXGroup;
 			children = (
-				8F3A27A7216724F30019A579 /* BodyMaterial.swift */,
-				8F3A27A52167240F0019A579 /* Size.swift */,
-				8F3A27A3216723510019A579 /* Model.swift */,
-				8F3A27A1216723030019A579 /* HowToOrderValve.swift */,
-				8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */,
-				8FDC99CE218F3E9600B0F509 /* CharacteristicTableViewCell.xib */,
-				8F8B477E216FC9850023A399 /* InitalTableViewController.swift */,
-				8F3A279D216721C70019A579 /* HowToOrderPressureRegulatorValveTableViewController.swift */,
-				8F3A279F216722190019A579 /* Storyboard.storyboard */,
-				8F3A277621671FAA0019A579 /* Assets.xcassets */,
-				8F3A277821671FAA0019A579 /* LaunchScreen.storyboard */,
 				8F3A276F21671F9D0019A579 /* AppDelegate.swift */,
+				8FDC9A13218F773F00B0F509 /* Controllers */,
+				8FDC9A11218F770300B0F509 /* Model */,
+				8FDC9A12218F772300B0F509 /* VIew */,
+				8F3A277621671FAA0019A579 /* Assets.xcassets */,
 				8F3A277B21671FAA0019A579 /* Info.plist */,
 			);
 			path = HowToOrderPRVMK60;
@@ -144,6 +137,37 @@
 				8F3A279121671FAB0019A579 /* Info.plist */,
 			);
 			path = HowToOrderPRVMK60UITests;
+			sourceTree = "<group>";
+		};
+		8FDC9A11218F770300B0F509 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F3A27A1216723030019A579 /* HowToOrderValve.swift */,
+				8F3A27A3216723510019A579 /* Model.swift */,
+				8F3A27A52167240F0019A579 /* Size.swift */,
+				8F3A27A7216724F30019A579 /* BodyMaterial.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8FDC9A12218F772300B0F509 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				8F3A277821671FAA0019A579 /* LaunchScreen.storyboard */,
+				8F3A279F216722190019A579 /* Storyboard.storyboard */,
+				8FDC99CE218F3E9600B0F509 /* CharacteristicTableViewCell.xib */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		8FDC9A13218F773F00B0F509 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8F8B477E216FC9850023A399 /* InitalTableViewController.swift */,
+				8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */,
+				8F3A279D216721C70019A579 /* HowToOrderPressureRegulatorValveTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +477,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLD58K8YP9;
 				INFOPLIST_FILE = HowToOrderPRVMK60/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KLD58K8YP9;
 				INFOPLIST_FILE = HowToOrderPRVMK60/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

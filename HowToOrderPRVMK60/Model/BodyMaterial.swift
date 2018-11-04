@@ -5,8 +5,8 @@
 //  Created by Carlos Santiago Cruz on 04/10/18.
 //  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
 //
-
-
+import Foundation
+import UIKit
 
 enum BodyMaterial: String {
     case DultilIron = "DI"

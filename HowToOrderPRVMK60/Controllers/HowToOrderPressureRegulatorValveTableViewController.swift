@@ -5,7 +5,7 @@
 //  Created by Carlos Santiago Cruz on 04/10/18.
 //  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
@@ -38,8 +38,8 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellSelection" , for: indexPath)
         let valve = comodin[indexPath.row]
         cell.showsReorderControl = true
-        cell.textLabel?.text = ""
-        cell.detailTextLabel?.text = ""
+        cell.textLabel?.text = "hola"
+        cell.detailTextLabel?.text = "Hola"
         
         return cell
     }
