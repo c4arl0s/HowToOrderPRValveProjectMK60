@@ -13,7 +13,6 @@ class InitalTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "inicial"
     }
 
     override func didReceiveMemoryWarning() {

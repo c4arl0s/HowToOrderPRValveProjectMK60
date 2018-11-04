@@ -19,13 +19,13 @@ class HowToOrderValve {
         self.bodyMaterial = bodyMaterial
     }
 }
-
-var howToOrderValves: [HowToOrderValve] = [
-    HowToOrderValve(model: .Standard, size: .ThreeOctave, bodyMaterial: .Bronze),
-    HowToOrderValve(model: .HighPressure, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
-    HowToOrderValve(model: .LargeDiaphragm, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
-    HowToOrderValve(model: .QuickChange, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
-]
-
-
+//
+//var howToOrderValves: [HowToOrderValve] = [
+//    HowToOrderValve(model: .Standard, size: .ThreeOctave, bodyMaterial: .Bronze),
+//    HowToOrderValve(model: .HighPressure, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
+//    HowToOrderValve(model: .LargeDiaphragm, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
+//    HowToOrderValve(model: .QuickChange, size: .oneAndHalf, bodyMaterial: .CarbonSteel),
+//]
+//
+//
 
