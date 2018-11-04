@@ -9,30 +9,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--How to Order with Options-->
         <scene sceneID="U0s-KL-gVk">
             <objects>
-                <tableViewController id="G3b-dv-taN" customClass="HowToOrderPressureRegulatorValveTableViewController" customModule="HowToOrderPRVMK60" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="How to Order with Options" id="G3b-dv-taN" customClass="HowToOrderPressureRegulatorValveTableViewController" customModule="HowToOrderPRVMK60" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="boK-i8-Ih2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="MhO-b9-VRX">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="How To Order a PRV" id="Ygy-DO-8eb">
-                                    <barButtonItem key="leftBarButtonItem" title="Back" id="2MJ-XP-bym">
-                                        <connections>
-                                            <action selector="nextButtonTapped:" destination="G3b-dv-taN" id="18q-rH-l1Z"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellSelection" id="9y8-tD-5hR">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9y8-tD-5hR" id="aGT-5l-hOR">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -51,26 +38,17 @@
             </objects>
             <point key="canvasLocation" x="330" y="-35"/>
         </scene>
-        <!--Inital Table View Controller-->
+        <!--Characteristics-->
         <scene sceneID="ZDQ-sy-Tbx">
             <objects>
-                <tableViewController id="cPr-Bw-8Lh" customClass="InitalTableViewController" customModule="HowToOrderPRVMK60" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Characteristics" id="cPr-Bw-8Lh" customClass="InitalTableViewController" customModule="HowToOrderPRVMK60" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x9h-EV-1Lf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="tBb-mz-nZ8">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Characteristcis" id="KCt-Wj-lFG">
-                                    <barButtonItem key="rightBarButtonItem" title="Next" id="O91-Rn-K2R"/>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacteristicTableViewCell" id="wtI-H6-F4H">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacteristicTableViewCell" id="wtI-H6-F4H" customClass="CharacteristicTableViewCell" customModule="HowToOrderPRVMK60" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wtI-H6-F4H" id="RFD-9u-VGo">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>

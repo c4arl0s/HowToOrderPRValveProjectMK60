@@ -13,7 +13,6 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.title = "Easy Order MK60 Valve"
     }
 
@@ -38,8 +37,8 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellSelection" , for: indexPath)
         let valve = comodin[indexPath.row]
         cell.showsReorderControl = true
-        cell.textLabel?.text = "hola"
-        cell.detailTextLabel?.text = "Hola"
+        cell.textLabel?.text = valve
+        cell.detailTextLabel?.text = valve
         
         return cell
     }
@@ -48,7 +47,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         let const = indexPath.row
         print(const)
         let valve = comodin[indexPath.row]
-        print("")
+        print(valve)
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
         }
