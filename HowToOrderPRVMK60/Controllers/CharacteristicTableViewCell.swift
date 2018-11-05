@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class CharacteristicTableViewCell: UITableViewCell {
+ 
     @IBOutlet weak var characteristicLabel: UILabel!
     @IBOutlet weak var optionLabel: UILabel!
     

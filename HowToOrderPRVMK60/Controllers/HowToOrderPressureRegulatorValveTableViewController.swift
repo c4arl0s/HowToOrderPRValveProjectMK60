@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
+ 
     var comodin: [String] = []
     
     override func viewDidLoad() {
@@ -27,11 +28,8 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return comodin.count
-        } else {
-            return 0
-        }
+        return 0
+        
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellSelection" , for: indexPath)
@@ -43,7 +41,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //tableView.deselectRow(at: indexPath, animated: true)
+        // tableView.deselectRow(at: indexPath, animated: true)
         let const = indexPath.row
         print(const)
         let valve = comodin[indexPath.row]

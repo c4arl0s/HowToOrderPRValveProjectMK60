@@ -24,6 +24,7 @@ class HowToOrderValve {
                                      "Body Material"]
         return arrayOfCharacteriscs
     }
+    
 }
 
 

@@ -1,24 +1,23 @@
 //
-//  InitalTableViewController.swift
+//  FirstTableViewController.swift
 //  HowToOrderPRVMK60
 //
-//  Created by Carlos Santiago Cruz on 11/10/18.
+//  Created by Carlos Santiago Cruz on 04/11/18.
 //  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
 //
-import Foundation
+
 import UIKit
 
-class InitalTableViewController: UITableViewController {
-    
+class FirstTableViewController: UITableViewController {
 //    var howToOrder: HowToOrderValve?
-    let array = ["Model", "Size", "BOdy Material"]
+    let array = ["Model", "Size", "Body Material"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerTableViewNIB()
         addSomePaddingToTheTop()
         automaticDimension()
-
+        
     }
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,10 +34,9 @@ class InitalTableViewController: UITableViewController {
         cell.characteristicLabel?.text = characteristic
         return cell
     }
-  
+    
     func registerTableViewNIB(){
-        tableView.register(UINib(nibName: "CharacteristicTableViewCell", bundle: nil),
-                                 forCellReuseIdentifier: "CharacteristicTableViewCell")
+        tableView.register(UINib(nibName: "CharacteristicTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacteristicTableViewCell")
     }
     func addSomePaddingToTheTop() {
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
