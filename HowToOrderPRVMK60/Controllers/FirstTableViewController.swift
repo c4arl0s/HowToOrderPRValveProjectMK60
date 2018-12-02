@@ -24,12 +24,12 @@ class FirstTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return HowToOrderValve.getAllCharacteristics().count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell", for: indexPath) as! CharacteristicTableViewCell
-        let characteristic = array[indexPath.row]
+        let characteristic = HowToOrderValve.getAllCharacteristics()[indexPath.row]
         cell.characteristicLabel?.text = characteristic
         return cell
     }

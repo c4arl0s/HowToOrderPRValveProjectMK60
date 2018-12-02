@@ -18,10 +18,19 @@ struct HowToOrderValve {
         self.size = size
         self.bodyMaterial = bodyMaterial
     }
-    func getAllCharacteristics() -> [String] {
+    static func getAllCharacteristics() -> [String] {
         let arrayOfCharacteriscs = [ "Model",
                                      "Size",
-                                     "Body Material"]
+                                     "Body Material",
+                                     "End Connections",
+                                     "Trim",
+                                     "Seat Material",
+                                     "Cv",
+                                     "MK 60 Spring Range",
+                                     "Diaphragm",
+                                     "Actuator",
+                                     
+        ]
         return arrayOfCharacteriscs
     }
 }
