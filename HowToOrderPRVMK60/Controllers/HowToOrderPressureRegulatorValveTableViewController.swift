@@ -13,7 +13,6 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Easy Order MK60 Valve"
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +39,6 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // tableView.deselectRow(at: indexPath, animated: true)
         let const = indexPath.row
         print(const)
         let valve = passedArrayFromFTVC[indexPath.row]

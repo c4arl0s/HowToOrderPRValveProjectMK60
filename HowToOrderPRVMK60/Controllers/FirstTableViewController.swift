@@ -77,6 +77,7 @@ class FirstTableViewController: UITableViewController {
         if (segue.identifier == "goToChoose") {
             let viewController = segue.destination as! HowToOrderPressureRegulatorValveTableViewController
             viewController.passedArrayFromFTVC = arrayToPass
+            viewController.navigationItem.title = titleToPass
         }
     }
    

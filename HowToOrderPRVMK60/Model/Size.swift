@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum Size: String {
+enum Size: String, CaseIterable {
     case oneQuarter = "025"
     case ThreeOctave = "038"
     case oneAndHalf = "050"
@@ -40,8 +40,14 @@ enum Size: String {
         let arrayOfSizes = [  Size.oneQuarter.feature,
                               Size.ThreeOctave.feature,
                               Size.oneAndHalf.feature,
-                              Size.threeQuarter.feature]
+                              Size.threeQuarter.feature,
+                              Size.one.feature,
+                              Size.oneOneQuarter.feature,
+                              Size.oneOneAndHalf.feature,
+                              Size.two.feature,
+                              Size.twoAndHalf.feature,
+                              Size.three.feature,
+                              Size.four.feature ]
         return arrayOfSizes
-        
     }
 }
