@@ -9,19 +9,28 @@ import Foundation
 import UIKit
 
 enum BodyMaterial: String {
-    case DultilIron = "DI"
-    case Bronze = "BR"
-    case CarbonSteel = "CS"
-    case StainlessSteel = "S6"
-    case CastIron = "CI"
+    case dultilIron = "DI"
+    case bronze = "BR"
+    case carbonSteel = "CS"
+    case stainlessSteel = "S6"
+    case castIron = "CI"
     
     var feature: String {
         switch self {
-        case .DultilIron: return "Ductil Iron"
-        case .Bronze: return "Bronze"
-        case .CarbonSteel: return "Carbon Steel"
-        case .StainlessSteel: return "Stainless Steel"
-        case .CastIron: return "Cast Iron"
+        case .dultilIron: return "Ductil Iron"
+        case .bronze: return "Bronze"
+        case .carbonSteel: return "Carbon Steel"
+        case .stainlessSteel: return "Stainless Steel"
+        case .castIron: return "Cast Iron"
         }
+    }
+    static func getAllMaterials() -> [String] {
+        let arrayOfMaterials = [ BodyMaterial.dultilIron.feature,
+                                BodyMaterial.bronze.feature,
+                                BodyMaterial.carbonSteel.feature,
+                                BodyMaterial.stainlessSteel.feature,
+                                BodyMaterial.castIron.feature
+                                ]
+        return arrayOfMaterials
     }
 }

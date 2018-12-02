@@ -9,6 +9,8 @@
 import UIKit
 
 class FirstTableViewController: UITableViewController {
+    var arrayToPass: [String] = []
+    var titleToPass: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,13 +53,31 @@ class FirstTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRow(at: indexPath)! as! CharacteristicTableViewCell
         switch indexPath {
         case [0,0]:
-            performSegue(withIdentifier: "goToChoose", sender: indexPath.row)
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = Model.getAllModels()
+            performSegue(withIdentifier: "goToChoose", sender: self)
+        case [0,1]:
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = Size.getAllSizes()
+            performSegue(withIdentifier: "goToChoose", sender: self)
+        case [0,2]:
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = BodyMaterial.getAllMaterials()
+            performSegue(withIdentifier: "goToChoose", sender: self)
         default:
             print("noneofThem")
         }
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goToChoose") {
+            let viewController = segue.destination as! HowToOrderPressureRegulatorValveTableViewController
+            viewController.passedArrayFromFTVC = arrayToPass
+        }
     }
    
 }

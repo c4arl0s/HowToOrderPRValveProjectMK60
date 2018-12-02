@@ -9,7 +9,8 @@
 import UIKit
 
 class OptionTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var labelOption: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        

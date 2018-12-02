@@ -23,10 +23,8 @@ enum Model: String  {
         case .LD: return "Large Diaphragm 61"
         }
     }
-    func getAllModels() -> [String] {
+    static func getAllModels() -> [String] {
         let arrayOfModels = [ "Standard", "High Pressure", "Quick Change", "Large Diaphragm" ]
-        let number = arrayOfModels.count
-        print(number)
         return arrayOfModels
     }
 }
