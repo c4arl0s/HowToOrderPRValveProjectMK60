@@ -9,7 +9,6 @@
 import UIKit
 
 class FirstTableViewController: UITableViewController {
-    let array = ["Model", "Size", "Body Material"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +48,16 @@ class FirstTableViewController: UITableViewController {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+        switch indexPath {
+        case [0,0]:
+            performSegue(withIdentifier: "goToChoose", sender: indexPath.row)
+        default:
+            print("noneofThem")
+        }
+        
     }
    
 }
