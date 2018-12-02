@@ -18,7 +18,6 @@
 		8F3A27A4216723510019A579 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A27A3216723510019A579 /* Model.swift */; };
 		8F3A27A62167240F0019A579 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A27A52167240F0019A579 /* Size.swift */; };
 		8F3A27A8216724F30019A579 /* BodyMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A27A7216724F30019A579 /* BodyMaterial.swift */; };
-		8F8B477F216FC9850023A399 /* InitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8B477E216FC9850023A399 /* InitalTableViewController.swift */; };
 		8FDC99CF218F3E9600B0F509 /* CharacteristicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */; };
 		8FDC99D0218F3E9600B0F509 /* CharacteristicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FDC99CE218F3E9600B0F509 /* CharacteristicTableViewCell.xib */; };
 		8FDC9A16218FA61300B0F509 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC9A14218FA61300B0F509 /* OptionTableViewCell.swift */; };
@@ -61,7 +60,6 @@
 		8F3A27A3216723510019A579 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8F3A27A52167240F0019A579 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		8F3A27A7216724F30019A579 /* BodyMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMaterial.swift; sourceTree = "<group>"; };
-		8F8B477E216FC9850023A399 /* InitalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitalTableViewController.swift; sourceTree = "<group>"; };
 		8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicTableViewCell.swift; sourceTree = "<group>"; };
 		8FDC99CE218F3E9600B0F509 /* CharacteristicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacteristicTableViewCell.xib; sourceTree = "<group>"; };
 		8FDC9A14218FA61300B0F509 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -170,10 +168,9 @@
 		8FDC9A13218F773F00B0F509 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8F8B477E216FC9850023A399 /* InitalTableViewController.swift */,
-				8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */,
 				8FDC9A18218FDE0700B0F509 /* FirstTableViewController.swift */,
 				8F3A279D216721C70019A579 /* HowToOrderPressureRegulatorValveTableViewController.swift */,
+				8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */,
 				8FDC9A14218FA61300B0F509 /* OptionTableViewCell.swift */,
 			);
 			path = Controllers;
@@ -247,13 +244,16 @@
 				TargetAttributes = {
 					8F3A276B21671F9D0019A579 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					8F3A277F21671FAA0019A579 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 8F3A276B21671F9D0019A579;
 					};
 					8F3A278A21671FAB0019A579 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 8F3A276B21671F9D0019A579;
 					};
 				};
@@ -321,7 +321,6 @@
 				8FDC9A16218FA61300B0F509 /* OptionTableViewCell.swift in Sources */,
 				8F3A277021671F9D0019A579 /* AppDelegate.swift in Sources */,
 				8F3A27A4216723510019A579 /* Model.swift in Sources */,
-				8F8B477F216FC9850023A399 /* InitalTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,7 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Santiago.HowToOrderPRVMK60;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -515,7 +514,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Santiago.HowToOrderPRVMK60;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -535,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Santiago.HowToOrderPRVMK60Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HowToOrderPRVMK60.app/HowToOrderPRVMK60";
 			};
@@ -556,7 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Santiago.HowToOrderPRVMK60Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HowToOrderPRVMK60.app/HowToOrderPRVMK60";
 			};
@@ -576,7 +575,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Santiago.HowToOrderPRVMK60UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = HowToOrderPRVMK60;
 			};
@@ -596,7 +595,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Santiago.HowToOrderPRVMK60UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = HowToOrderPRVMK60;
 			};

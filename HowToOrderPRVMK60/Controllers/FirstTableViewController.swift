@@ -9,7 +9,6 @@
 import UIKit
 
 class FirstTableViewController: UITableViewController {
-//    var howToOrder: HowToOrderValve?
     let array = ["Model", "Size", "Body Material"]
     
     override func viewDidLoad() {
@@ -17,8 +16,8 @@ class FirstTableViewController: UITableViewController {
         registerTableViewNIB()
         addSomePaddingToTheTop()
         automaticDimension()
-        
     }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -45,7 +44,7 @@ class FirstTableViewController: UITableViewController {
         tableView.scrollIndicatorInsets = insets
     }
     func automaticDimension(){
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
     }
     override func didReceiveMemoryWarning() {

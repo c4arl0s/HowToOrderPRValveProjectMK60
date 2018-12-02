@@ -10,24 +10,23 @@ import Foundation
 import UIKit
 
 enum Model: String  {
-    case Standard = "60"
-    case HighPressure = "60HP"
-    case QuickChange = "60QC"
-    case LargeDiaphragm = "61"
+    case Std = "60"
+    case HP = "60HP"
+    case QC = "60QC"
+    case LD = "61"
     
     var feature: String {
         switch self {
-        case .Standard: return "Standard 60"
-        case .HighPressure: return "High Pressure 60HP"
-        case .QuickChange: return "Quick Change 60QC"
-        case .LargeDiaphragm: return "Large Diaphragm 61"
+        case .Std: return "Standard 60"
+        case .HP: return "High Pressure 60HP"
+        case .QC: return "Quick Change 60QC"
+        case .LD: return "Large Diaphragm 61"
         }
     }
     func getAllModels() -> [String] {
-        let arrayOfModels = [ Model.Standard.feature,
-                              Model.HighPressure.feature,
-                              Model.QuickChange.feature,
-                              Model.LargeDiaphragm.feature]
+        let arrayOfModels = [ "Standard", "High Pressure", "Quick Change", "Large Diaphragm" ]
+        let number = arrayOfModels.count
+        print(number)
         return arrayOfModels
     }
 }

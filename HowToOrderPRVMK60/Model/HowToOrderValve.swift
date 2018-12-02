@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HowToOrderValve {
+struct HowToOrderValve {
     var model: Model
     var size: Size
     var bodyMaterial: BodyMaterial
@@ -24,7 +24,4 @@ class HowToOrderValve {
                                      "Body Material"]
         return arrayOfCharacteriscs
     }
-    
 }
-
-
