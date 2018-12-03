@@ -8,8 +8,14 @@
 import Foundation
 import UIKit
 
+protocol HowToOrderPressureRegulatorValveDelegate {
+    func updateSelectedRow(_ howToOrderPRVRow: String)
+}
+
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
     var passedArrayFromFTVC: [String] = []
+    var selectedChar: String = ""
+    var delegate: HowToOrderPressureRegulatorValveDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +41,12 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         cell.showsReorderControl = true
         cell.textLabel?.text = valve
         cell.detailTextLabel?.text = valve
+        let optionSelected = valve
+        delegate?.updateSelectedRow(optionSelected)
         
         return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let const = indexPath.row
-        print(const)
-        let valve = passedArrayFromFTVC[indexPath.row]
-        print(valve)
-        if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .checkmark
-        }
-    }
+    
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .none
@@ -66,6 +66,15 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
         print("you pressed next button, the last row is ")
     }
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let const = indexPath.row
+        print(const)
+        let valve = passedArrayFromFTVC[indexPath.row]
+        print(valve)
+        if let cell = tableView.cellForRow(at: indexPath) {
+            cell.accessoryType = .checkmark
+        }
+        
+    }
 
 }

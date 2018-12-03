@@ -8,7 +8,8 @@
 
 import UIKit
 
-class FirstTableViewController: UITableViewController {
+class FirstTableViewController: UITableViewController, HowToOrderPressureRegulatorValveDelegate {
+    var selectedChar: String = ""
     var arrayToPass: [String] = []
     var titleToPass: String = ""
     
@@ -28,12 +29,7 @@ class FirstTableViewController: UITableViewController {
         return HowToOrderValve.getAllCharacteristics().count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell", for: indexPath) as! CharacteristicTableViewCell
-        let characteristic = HowToOrderValve.getAllCharacteristics()[indexPath.row]
-        cell.characteristicLabel?.text = characteristic
-        return cell
-    }
+    
     
     func registerTableViewNIB(){
         tableView.register(UINib(nibName: "CharacteristicTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacteristicTableViewCell")
@@ -73,12 +69,26 @@ class FirstTableViewController: UITableViewController {
         }
         
     }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell", for: indexPath) as! CharacteristicTableViewCell
+        let characteristic = HowToOrderValve.getAllCharacteristics()[indexPath.row]
+        cell.characteristicLabel?.text = characteristic
+        return cell
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goToChoose") {
             let viewController = segue.destination as! HowToOrderPressureRegulatorValveTableViewController
             viewController.passedArrayFromFTVC = arrayToPass
             viewController.navigationItem.title = titleToPass
+            viewController.delegate = self
         }
+    }
+    func updateSelectedRow(_ howToOrderPRVRow: String) {
+        self.selectedChar = howToOrderPRVRow
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell") as! CharacteristicTableViewCell
+        cell.optionLabel?.text = self.selectedChar
+        self.tableView.reloadData()
     }
    
 }
