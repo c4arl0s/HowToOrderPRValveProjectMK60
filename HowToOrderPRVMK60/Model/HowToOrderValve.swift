@@ -28,9 +28,7 @@ struct HowToOrderValve {
                                      "Cv",
                                      "MK 60 Spring Range",
                                      "Diaphragm",
-                                     "Actuator",
-                                     
-        ]
+                                     "Actuator" ]
         return arrayOfCharacteriscs
     }
 }

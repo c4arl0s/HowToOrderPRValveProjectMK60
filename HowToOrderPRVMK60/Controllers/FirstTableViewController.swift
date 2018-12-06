@@ -29,8 +29,6 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
         return HowToOrderValve.getAllCharacteristics().count
     }
     
-    
-    
     func registerTableViewNIB(){
         tableView.register(UINib(nibName: "CharacteristicTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacteristicTableViewCell")
     }
@@ -84,11 +82,10 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
             viewController.delegate = self
         }
     }
-    func updateSelectedRow(_ howToOrderPRVRow: String) {
-        self.selectedChar = howToOrderPRVRow
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell") as! CharacteristicTableViewCell
-        cell.optionLabel?.text = self.selectedChar
-        self.tableView.reloadData()
+    func updateLabelWithSelectedRow(_ howToOrderPRVRow: String) {
+        let newCell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell") as! CharacteristicTableViewCell
+        newCell.optionLabel?.text = howToOrderPRVRow
+        tableView.reloadRows(at: <#T##[IndexPath]#>, with: <#T##UITableView.RowAnimation#>)
     }
    
 }

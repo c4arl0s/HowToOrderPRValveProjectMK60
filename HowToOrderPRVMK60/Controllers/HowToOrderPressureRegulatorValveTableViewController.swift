@@ -8,14 +8,10 @@
 import Foundation
 import UIKit
 
-protocol HowToOrderPressureRegulatorValveDelegate {
-    func updateSelectedRow(_ howToOrderPRVRow: String)
-}
-
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
     var passedArrayFromFTVC: [String] = []
     var selectedChar: String = ""
-    var delegate: HowToOrderPressureRegulatorValveDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +37,8 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         cell.showsReorderControl = true
         cell.textLabel?.text = valve
         cell.detailTextLabel?.text = valve
-        let optionSelected = valve
-        delegate?.updateSelectedRow(optionSelected)
+        let selectedRow = valve
+        
         
         return cell
     }

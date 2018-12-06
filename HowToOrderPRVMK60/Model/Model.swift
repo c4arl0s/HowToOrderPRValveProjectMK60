@@ -24,7 +24,11 @@ enum Model: String  {
         }
     }
     static func getAllModels() -> [String] {
-        let arrayOfModels = [ "Standard", "High Pressure", "Quick Change", "Large Diaphragm" ]
+
+        let arrayOfModels = [ Model.Std.feature,
+                              Model.HP.feature,
+                              Model.QC.feature,
+                              Model.LD.feature ]
         return arrayOfModels
     }
 }
