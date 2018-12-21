@@ -42,7 +42,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         cell.showsReorderControl = true
         cell.textLabel?.text = optionSelected
         cell.detailTextLabel?.text = optionSelected
-        
+        self.delegate?.doSomething(with: optionSelected)
 
         return cell
     }
