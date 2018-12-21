@@ -8,10 +8,7 @@
 
 import UIKit
 
-class FirstTableViewController: UITableViewController, Delegate {
-    func doSomething(with data: String) {
-        print(data)
-    }
+class FirstTableViewController: UITableViewController {
     
     var selected: String = ""
     var arrayToPass: [String] = []

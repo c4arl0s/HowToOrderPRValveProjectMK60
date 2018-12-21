@@ -8,8 +8,11 @@
 import Foundation
 import UIKit
 
-class CharacteristicTableViewCell: UITableViewCell {
- 
+class CharacteristicTableViewCell: UITableViewCell, Delegate {
+    func doSomething(with data: String) {
+        print(data)
+    }
+    
     @IBOutlet weak var characteristicLabel: UILabel!
     @IBOutlet weak var optionLabel: UILabel!
     
