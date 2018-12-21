@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
+protocol Delegate {
+    func doSomething(with data: String)
+}
+
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
     var passedArrayFromFTVC: [String] = []
-    var selectedChar: String = ""
+    var selected: String = ""
+    var delegate: Delegate?
     
     
     override func viewDidLoad() {
@@ -33,13 +38,12 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellSelection" , for: indexPath) as! OptionTableViewCell
-        let valve = passedArrayFromFTVC[indexPath.row]
+        let optionSelected = passedArrayFromFTVC[indexPath.row]
         cell.showsReorderControl = true
-        cell.textLabel?.text = valve
-        cell.detailTextLabel?.text = valve
-        let selectedRow = valve
+        cell.textLabel?.text = optionSelected
+        cell.detailTextLabel?.text = optionSelected
         
-        
+
         return cell
     }
     
@@ -63,10 +67,10 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         print("you pressed next button, the last row is ")
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let const = indexPath.row
-        print(const)
-        let valve = passedArrayFromFTVC[indexPath.row]
-        print(valve)
+        let whatContentsTheRow = indexPath.row
+        print(whatContentsTheRow)
+        let option = passedArrayFromFTVC[indexPath.row]
+        print(option)
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
         }

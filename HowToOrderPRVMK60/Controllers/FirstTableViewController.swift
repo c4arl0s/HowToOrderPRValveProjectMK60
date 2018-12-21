@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FirstTableViewController: UITableViewController, HowToOrderPressureRegulatorValveDelegate {
-    var selectedChar: String = ""
+class FirstTableViewController: UITableViewController {
+    var selected: String = ""
     var arrayToPass: [String] = []
     var titleToPass: String = ""
     
@@ -45,6 +45,14 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell", for: indexPath) as! CharacteristicTableViewCell
+        let characteristic = HowToOrderValve.getAllCharacteristics()[indexPath.row]
+        cell.characteristicLabel?.text = characteristic
+        return cell
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
 //        let indexPath = tableView.indexPathForSelectedRow!
@@ -67,25 +75,13 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
         }
         
     }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell", for: indexPath) as! CharacteristicTableViewCell
-        let characteristic = HowToOrderValve.getAllCharacteristics()[indexPath.row]
-        cell.characteristicLabel?.text = characteristic
-        return cell
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goToChoose") {
             let viewController = segue.destination as! HowToOrderPressureRegulatorValveTableViewController
             viewController.passedArrayFromFTVC = arrayToPass
             viewController.navigationItem.title = titleToPass
-            viewController.delegate = self
         }
-    }
-    func updateLabelWithSelectedRow(_ howToOrderPRVRow: String) {
-        let newCell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell") as! CharacteristicTableViewCell
-        newCell.optionLabel?.text = howToOrderPRVRow
-        tableView.reloadRows(at: <#T##[IndexPath]#>, with: <#T##UITableView.RowAnimation#>)
     }
    
 }
