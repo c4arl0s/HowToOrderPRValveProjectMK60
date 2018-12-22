@@ -55,10 +55,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         passedArrayFromFTVC.insert(movedValve, at: destinationIndexPath.row)
         tableView.reloadData()
     }
-    
-    @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
-        print("you pressed next button, the last row is ")
-    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let optionSelected = passedArrayFromFTVC[indexPath.row]
         self.delegate?.updateOptionLabel(data: optionSelected, indexPathPassed: indexPathPassed)
