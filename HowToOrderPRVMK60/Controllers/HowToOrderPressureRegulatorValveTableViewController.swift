@@ -43,7 +43,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         cell.detailTextLabel?.text = optionSelected
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .none

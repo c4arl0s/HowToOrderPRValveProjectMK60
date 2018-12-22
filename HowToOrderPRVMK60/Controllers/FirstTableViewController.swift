@@ -80,10 +80,25 @@ class FirstTableViewController: UITableViewController, Delegate {
             titleToPass = currentCell.characteristicLabel.text!
             arrayToPass = BodyMaterial.getAllMaterials()
             performSegue(withIdentifier: "goToChoose", sender: self)
+        case [0,3]:
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = Endconnection.getAllEndconnection()
+            performSegue(withIdentifier: "goToChoose", sender: self)
+        case [0,4]:
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = Trim.getAllTrim()
+            performSegue(withIdentifier: "goToChoose", sender: self)
+        case [0,5]:
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = SeatMaterial.getAllSeatMaterial()
+            performSegue(withIdentifier: "goToChoose", sender: self)
+        case [0,6]:
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = Cv.getAllCv()
+            performSegue(withIdentifier: "goToChoose", sender: self)
         default:
             print("noneofThem")
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
