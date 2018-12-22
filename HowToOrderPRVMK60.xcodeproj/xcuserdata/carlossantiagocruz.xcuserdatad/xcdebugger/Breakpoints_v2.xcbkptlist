@@ -10,18 +10,18 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "HowToOrderPRVMK60/Controllers/FirstTableViewController.swift"
-            timestampString = "567198114.200693"
+            timestampString = "567198689.278181"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
             endingLineNumber = "15"
-            landmarkName = "updateOptionLabel(data:indexPathPassed:)"
+            landmarkName = "updateOptionLabel(dataToPass:indexPathPassed:)"
             landmarkType = "7">
             <Actions>
                <BreakpointActionProxy
                   ActionExtensionID = "Xcode.BreakpointAction.Log">
                   <ActionContent
-                     message = "this data is passed from second VC ? @data@"
+                     message = "this data is passed from second VC ? @dataToPass@"
                      conveyanceType = "0">
                   </ActionContent>
                </BreakpointActionProxy>

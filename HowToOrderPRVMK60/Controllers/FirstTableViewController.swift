@@ -16,7 +16,7 @@ class FirstTableViewController: UITableViewController, Delegate {
         self.tableView.reloadData()
     }
     
-    var selected: String = ""
+//    var selected: String = ""
     var arrayToPass: [String] = []
     var titleToPass: String = ""
     var indexPathToPass: IndexPath!
