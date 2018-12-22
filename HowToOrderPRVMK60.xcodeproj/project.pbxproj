@@ -169,8 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				8FDC9A18218FDE0700B0F509 /* FirstTableViewController.swift */,
-				8F3A279D216721C70019A579 /* HowToOrderPressureRegulatorValveTableViewController.swift */,
 				8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */,
+				8F3A279D216721C70019A579 /* HowToOrderPressureRegulatorValveTableViewController.swift */,
 				8FDC9A14218FA61300B0F509 /* OptionTableViewCell.swift */,
 			);
 			path = Controllers;

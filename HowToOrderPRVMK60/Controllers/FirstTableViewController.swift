@@ -8,7 +8,11 @@
 
 import UIKit
 
-class FirstTableViewController: UITableViewController {
+class FirstTableViewController: UITableViewController, Delegate {
+    func updateOptionLabel() {
+        print("")
+        
+    }
     
     var selected: String = ""
     var arrayToPass: [String] = []
@@ -19,6 +23,8 @@ class FirstTableViewController: UITableViewController {
         registerTableViewNIB()
         addSomePaddingToTheTop()
         automaticDimension()
+        updateOptionLabel()
+        
     }
     
     // MARK: - Table view data source
@@ -79,9 +85,10 @@ class FirstTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goToChoose") {
-            let viewController = segue.destination as! HowToOrderPressureRegulatorValveTableViewController
-            viewController.passedArrayFromFTVC = arrayToPass
-            viewController.navigationItem.title = titleToPass
+            let destinationViewController = segue.destination as? HowToOrderPressureRegulatorValveTableViewController
+            destinationViewController?.passedArrayFromFTVC = arrayToPass
+            destinationViewController?.navigationItem.title = titleToPass
+            destinationViewController?.delegate = self
         }
     }
    

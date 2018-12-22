@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol OptionTableViewCellDelegate {
+    func updateOptionLabel(data: String)
+}
+
 class OptionTableViewCell: UITableViewCell {
     @IBOutlet weak var labelOption: UILabel!
+    var delegate: OptionTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.delegate?.updateOptionLabel(data: labelOption.text!)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
