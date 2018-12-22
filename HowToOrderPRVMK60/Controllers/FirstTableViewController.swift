@@ -9,21 +9,23 @@
 import UIKit
 
 class FirstTableViewController: UITableViewController, Delegate {
-    func updateOptionLabel() {
-        print("")
-        
+    func updateOptionLabel(data: String, indexPathPassed: IndexPath) {
+        let firstCell = tableView.cellForRow(at: indexPathPassed)! as! CharacteristicTableViewCell
+        firstCell.optionLabel.text = data
+        tableView.reloadData()
     }
     
     var selected: String = ""
     var arrayToPass: [String] = []
     var titleToPass: String = ""
+    var indexPathToPass: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerTableViewNIB()
         addSomePaddingToTheTop()
         automaticDimension()
-        updateOptionLabel()
+        
         
     }
     
@@ -57,6 +59,7 @@ class FirstTableViewController: UITableViewController, Delegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell", for: indexPath) as! CharacteristicTableViewCell
         let characteristic = HowToOrderValve.getAllCharacteristics()[indexPath.row]
         cell.characteristicLabel?.text = characteristic
+        
         return cell
     }
     
@@ -64,6 +67,7 @@ class FirstTableViewController: UITableViewController, Delegate {
         print(indexPath)
 //        let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as! CharacteristicTableViewCell
+        indexPathToPass = indexPath
         switch indexPath {
         case [0,0]:
             titleToPass = currentCell.characteristicLabel.text!
@@ -88,6 +92,8 @@ class FirstTableViewController: UITableViewController, Delegate {
             let destinationViewController = segue.destination as? HowToOrderPressureRegulatorValveTableViewController
             destinationViewController?.passedArrayFromFTVC = arrayToPass
             destinationViewController?.navigationItem.title = titleToPass
+            destinationViewController?.indexPathPassed = indexPathToPass
+            
             destinationViewController?.delegate = self
         }
     }

@@ -9,15 +9,14 @@ import Foundation
 import UIKit
 
 protocol Delegate {
-    func updateOptionLabel()
+    func updateOptionLabel(data: String, indexPathPassed: IndexPath)
 }
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
     var passedArrayFromFTVC: [String] = []
     var selected: String = ""
     var delegate: Delegate?
-    
-    
+    var indexPathPassed: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +66,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let optionSelected = passedArrayFromFTVC[indexPath.row]
-        self.delegate?.updateOptionLabel()
+        self.delegate?.updateOptionLabel(data: optionSelected, indexPathPassed: indexPathPassed)
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
         }
