@@ -55,12 +55,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         passedArrayFromFTVC.insert(movedValve, at: destinationIndexPath.row)
         tableView.reloadData()
     }
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            passedArrayFromFTVC.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .top)
-        }
-    }
+    
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
         print("you pressed next button, the last row is ")
     }

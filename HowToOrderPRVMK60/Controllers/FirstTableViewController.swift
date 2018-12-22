@@ -25,8 +25,6 @@ class FirstTableViewController: UITableViewController, Delegate {
         registerTableViewNIB()
         addSomePaddingToTheTop()
         automaticDimension()
-        
-        
     }
     
     // MARK: - Table view data source
@@ -93,7 +91,6 @@ class FirstTableViewController: UITableViewController, Delegate {
             destinationViewController?.passedArrayFromFTVC = arrayToPass
             destinationViewController?.navigationItem.title = titleToPass
             destinationViewController?.indexPathPassed = indexPathToPass
-            
             destinationViewController?.delegate = self
         }
     }
