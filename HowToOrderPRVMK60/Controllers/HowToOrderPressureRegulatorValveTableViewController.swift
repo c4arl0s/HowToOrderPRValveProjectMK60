@@ -14,7 +14,6 @@ protocol Delegate {
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
     var passedArrayFromFTVC: [String] = []
-    var selected: String = ""
     var delegate: Delegate?
     var indexPathPassed: IndexPath!
     
@@ -50,12 +49,6 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
             cell.accessoryType = .none
         }
     }
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let movedValve = passedArrayFromFTVC.remove(at: sourceIndexPath.row)
-        passedArrayFromFTVC.insert(movedValve, at: destinationIndexPath.row)
-        tableView.reloadData()
-    }
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let optionSelected = passedArrayFromFTVC[indexPath.row]
         self.delegate?.updateOptionLabel(data: optionSelected, indexPathPassed: indexPathPassed)
