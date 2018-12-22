@@ -10,9 +10,9 @@ import UIKit
 
 class FirstTableViewController: UITableViewController, Delegate {
     
-    func updateOptionLabel(data: String, indexPathPassed: IndexPath) {
-        let firstCell = tableView.cellForRow(at: indexPathPassed)! as! CharacteristicTableViewCell
-        firstCell.optionLabel.text = data
+    func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath) {
+        let cellFromIndexPathPassed = tableView.cellForRow(at: indexPathPassed)! as! CharacteristicTableViewCell
+        cellFromIndexPathPassed.optionLabel.text = dataToPass
         self.tableView.reloadData()
     }
     

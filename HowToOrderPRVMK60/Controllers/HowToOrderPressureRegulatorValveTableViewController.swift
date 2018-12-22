@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol Delegate {
-    func updateOptionLabel(data: String, indexPathPassed: IndexPath)
+    func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath)
 }
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
@@ -51,7 +51,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let optionSelected = passedArrayFromFTVC[indexPath.row]
-        self.delegate?.updateOptionLabel(data: optionSelected, indexPathPassed: indexPathPassed)
+        self.delegate?.updateOptionLabel(dataToPass: optionSelected, indexPathPassed: indexPathPassed)
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
         }
