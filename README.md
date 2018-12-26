@@ -1,2 +1,6 @@
 # HowToOrderPressureReducingValve
-This Xcode project is created for reducir efforts to construct an How to Order Model Pressure Reducing Valve MK60 Jordan Valve
+This Xcode project is created for reducir efforts to construct an How to Order Model Pressure Reducing Valve MK60 Jordan Valve.
+
+<p align="center">
+    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/howToOrderMK60screenshot.png" width="675">
+</p>
