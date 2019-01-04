@@ -62,7 +62,6 @@ class FirstTableViewController: UITableViewController, Delegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
 //        let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRow(at: indexPath)! as! CharacteristicTableViewCell
         indexPathToPass = indexPath
