@@ -108,5 +108,4 @@ class FirstTableViewController: UITableViewController, Delegate {
             destinationViewController?.delegate = self
         }
     }
-   
 }
