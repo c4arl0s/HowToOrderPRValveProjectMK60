@@ -17,7 +17,13 @@ struct HowToOrderValve {
     var seatMaterial: SeatMaterial
     var cv: Cv
     
-    init(model: Model, size: Size, bodyMaterial: BodyMaterial, endConnection: Endconnection, trim: Trim, seatMaterial: SeatMaterial, cv: Cv ) {
+    init(model: Model,
+         size: Size,
+         bodyMaterial: BodyMaterial,
+         endConnection: Endconnection,
+         trim: Trim,
+         seatMaterial: SeatMaterial,
+         cv: Cv ) {
         self.model = model
         self.size = size
         self.bodyMaterial = bodyMaterial
