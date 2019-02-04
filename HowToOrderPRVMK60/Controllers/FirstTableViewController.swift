@@ -10,11 +10,7 @@ import UIKit
 
 class FirstTableViewController: UITableViewController, Delegate {
     
-    func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath) {
-        let cellFromIndexPathPassed = tableView.cellForRow(at: indexPathPassed)! as! CharacteristicTableViewCell
-        cellFromIndexPathPassed.optionLabel.text = dataToPass
-        self.tableView.reloadData()
-    }
+
     
     var arrayToPass: [String] = []
     var titleToPass: String = ""
@@ -101,11 +97,17 @@ class FirstTableViewController: UITableViewController, Delegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goToChoose") {
-            let destinationViewController = segue.destination as? HowToOrderPressureRegulatorValveTableViewController
+            let destinationViewController =
+                segue.destination as? HowToOrderPressureRegulatorValveTableViewController
             destinationViewController?.passedArrayFromFTVC = arrayToPass
             destinationViewController?.navigationItem.title = titleToPass
             destinationViewController?.indexPathPassed = indexPathToPass
             destinationViewController?.delegate = self
         }
+    }
+    func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath) {
+        let cellFromIndexPathPassed = tableView.cellForRow(at: indexPathPassed)! as! CharacteristicTableViewCell
+        cellFromIndexPathPassed.optionLabel.text = dataToPass
+        self.tableView.reloadData()
     }
 }

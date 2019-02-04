@@ -36,7 +36,9 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
         
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellSelection" , for: indexPath) as! OptionTableViewCell
+        let cell = tableView
+                   .dequeueReusableCell(withIdentifier: "cellSelection",
+                                        for: indexPath) as! OptionTableViewCell
         let optionSelected = passedArrayFromFTVC[indexPath.row]
         cell.showsReorderControl = true
         cell.textLabel?.text = optionSelected
