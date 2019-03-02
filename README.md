@@ -252,3 +252,7 @@ class OptionTableViewCell: UITableViewCell {
 }
 ```
 
+<p align="center">
+    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/delegate.png">
+</p>
+
