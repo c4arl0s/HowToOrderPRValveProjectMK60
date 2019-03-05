@@ -135,6 +135,8 @@ class FirstTableViewController: UITableViewController, Delegate {
         self.tableView.reloadData()
     }
 }
+```
+
 
 ``` swift
 //
@@ -161,6 +163,10 @@ class CharacteristicTableViewCell: UITableViewCell {
     }
     
 }
+```
+
+
+``` swift
 //
 //  HowToOrderPressureRegulatorValveTableViewController.swift
 //  HowToOrderPRVMK60
@@ -225,8 +231,8 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
 
 }
 ```
-``` swift
 
+``` swift
 //
 //  OptionTableViewCell.swift
 //  HowToOrderPRVMK60
@@ -255,4 +261,3 @@ class OptionTableViewCell: UITableViewCell {
     }
 }
 ```
-
