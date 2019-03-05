@@ -16,6 +16,11 @@ This Xcode project is created to  reduce efforts to construct and Order a Pressu
     <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/3.png" width="375">
 </p>
 
+
+<p align="center">
+    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/delegate.png">
+</p>
+
 ``` swift
 //
 //  FirstTableViewController.swift
@@ -24,6 +29,7 @@ This Xcode project is created to  reduce efforts to construct and Order a Pressu
 //  Created by Carlos Santiago Cruz on 04/11/18.
 //  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
 //
+
 import UIKit
 
 class FirstTableViewController: UITableViewController, Delegate {
@@ -129,9 +135,32 @@ class FirstTableViewController: UITableViewController, Delegate {
         self.tableView.reloadData()
     }
 }
-```
 
 ``` swift
+//
+//  CharacteristicTableViewCell.swift
+//  HowToOrderPRVMK60
+//
+//  Created by Carlos Santiago Cruz on 04/11/18.
+//  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
+//
+import Foundation
+import UIKit
+
+class CharacteristicTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var characteristicLabel: UILabel!
+    @IBOutlet weak var optionLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+}
 //
 //  HowToOrderPressureRegulatorValveTableViewController.swift
 //  HowToOrderPRVMK60
@@ -197,33 +226,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
 }
 ```
 ``` swift
-//
-//  CharacteristicTableViewCell.swift
-//  HowToOrderPRVMK60
-//
-//  Created by Carlos Santiago Cruz on 04/11/18.
-//  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
-//
-import Foundation
-import UIKit
 
-class CharacteristicTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var characteristicLabel: UILabel!
-    @IBOutlet weak var optionLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-}
-```
-
-``` swift
 //
 //  OptionTableViewCell.swift
 //  HowToOrderPRVMK60
@@ -231,6 +234,7 @@ class CharacteristicTableViewCell: UITableViewCell {
 //  Created by Carlos Santiago Cruz on 04/11/18.
 //  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
 //
+
 import UIKit
 
 protocol OptionTableViewCellDelegate {
@@ -251,8 +255,4 @@ class OptionTableViewCell: UITableViewCell {
     }
 }
 ```
-
-<p align="center">
-    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/delegate.png">
-</p>
 
