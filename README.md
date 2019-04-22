@@ -34,8 +34,6 @@ import UIKit
 
 class FirstTableViewController: UITableViewController, Delegate {
     
-
-    
     var arrayToPass: [String] = []
     var titleToPass: String = ""
     var indexPathToPass: IndexPath!
