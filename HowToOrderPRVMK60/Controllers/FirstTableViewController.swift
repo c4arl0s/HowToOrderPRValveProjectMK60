@@ -8,9 +8,7 @@
 
 import UIKit
 
-class FirstTableViewController: UITableViewController, Delegate {
-    
-
+class FirstTableViewController: UITableViewController, HowToOrderPressureRegulatorValveTableViewControllerDelegate {
     
     var arrayToPass: [String] = []
     var titleToPass: String = ""

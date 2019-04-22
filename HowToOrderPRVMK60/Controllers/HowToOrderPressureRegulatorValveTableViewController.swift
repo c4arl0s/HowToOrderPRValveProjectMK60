@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-protocol Delegate {
+protocol HowToOrderPressureRegulatorValveTableViewControllerDelegate {
     func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath)
 }
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
     var passedArrayFromFTVC: [String] = []
-    var delegate: Delegate?
+    var delegate: HowToOrderPressureRegulatorValveTableViewControllerDelegate?
     var indexPathPassed: IndexPath!
     
     override func viewDidLoad() {
