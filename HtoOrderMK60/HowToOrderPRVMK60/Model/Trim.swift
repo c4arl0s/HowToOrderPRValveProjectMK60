@@ -23,7 +23,7 @@ enum Trim: String, CaseIterable  {
         }
     }
     
-    static func orderIdentifiers() -> [String] {
+    static var orderIdentifiers: [String] {
         var identifiers: [String] = []
         for trim in Trim.allCases {
             identifiers.append(trim.rawValue)

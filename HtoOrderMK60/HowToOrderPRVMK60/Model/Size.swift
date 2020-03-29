@@ -37,7 +37,7 @@ enum Size: String, CaseIterable {
         }
     }
     
-    static func orderIdentifiers() -> [String] {
+    static var orderIdentifiers: [String] {
         var identifiers: [String] = []
         for size in Size.allCases {
             identifiers.append(size.rawValue)

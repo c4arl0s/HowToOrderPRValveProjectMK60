@@ -45,7 +45,7 @@ enum Cv: String, CaseIterable  {
         case .I: return ""
         }
     }
-    static func orderIdentifiers() -> [String] {
+    static var orderIdentifiers: [String] {
         var identifiers: [String] = []
         for cv in Cv.allCases {
             identifiers.append(cv.rawValue)

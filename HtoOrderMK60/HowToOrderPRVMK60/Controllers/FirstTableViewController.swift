@@ -62,31 +62,31 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
         switch indexPath {
         case [0,0]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Model.orderIdentifiers()
+            arrayToPass = Model.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,1]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Size.orderIdentifiers()
+            arrayToPass = Size.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,2]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = BodyMaterial.orderIdentifiers()
+            arrayToPass = BodyMaterial.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,3]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Endconnection.orderIdentifiers()
+            arrayToPass = Endconnection.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,4]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Trim.orderIdentifiers()
+            arrayToPass = Trim.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,5]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = SeatMaterial.orderIdentifiers()
+            arrayToPass = SeatMaterial.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,6]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Cv.orderIdentifiers()
+            arrayToPass = Cv.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
         default:
             print("noneofThem")

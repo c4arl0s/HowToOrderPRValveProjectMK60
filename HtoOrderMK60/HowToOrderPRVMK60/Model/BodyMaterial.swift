@@ -24,7 +24,7 @@ enum BodyMaterial: String, CaseIterable {
         case .castIron: return "CI"
         }
     }
-    static func orderIdentifiers() -> [String] {
+    static var orderIdentifiers: [String] {
         var identifiers: [String] = []
         for bodyMaterial in BodyMaterial.allCases {
             identifiers.append(bodyMaterial.rawValue)

@@ -27,7 +27,7 @@ enum SeatMaterial: String, CaseIterable  {
         case .Y: return ""
         }
     }
-    static func orderIdentifiers() -> [String] {
+    static var orderIdentifiers: [String] {
         var identifiers: [String] = []
         for seatMaterial in SeatMaterial.allCases {
             identifiers.append(seatMaterial.rawValue)

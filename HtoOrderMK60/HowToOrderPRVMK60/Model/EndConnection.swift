@@ -32,7 +32,7 @@ enum Endconnection: String, CaseIterable  {
         }
     }
 
-    static func orderIdentifiers() -> [String] {
+    static var orderIdentifiers: [String] {
         var identifiers: [String] = []
         for endConnection in Endconnection.allCases {
             identifiers.append(endConnection.rawValue)
