@@ -14,6 +14,7 @@ protocol HowToOrderPressureRegulatorValveTableViewControllerDelegate {
 
 class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
     var passedArrayFromFTVC: [String] = []
+    // Create the delegate variable
     var delegate: HowToOrderPressureRegulatorValveTableViewControllerDelegate?
     var indexPathPassed: IndexPath!
     
@@ -53,6 +54,7 @@ class HowToOrderPressureRegulatorValveTableViewController: UITableViewController
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let optionSelected = passedArrayFromFTVC[indexPath.row]
+        // When is selected, senf the optionSelected and indexPathPassed
         self.delegate?.updateOptionLabel(dataToPass: optionSelected, indexPathPassed: indexPathPassed)
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark

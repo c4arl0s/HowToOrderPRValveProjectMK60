@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Trim: String  {
+enum Trim: String, CaseIterable  {
     case S3 = "303SS"
     case S6 = "316SS"
     case I3 = "303SSF/IFE (1/2 inch - 2 inch CS/S6)"
@@ -22,12 +22,12 @@ enum Trim: String  {
         case .I6: return ""
         }
     }
-    static func getAllTrim() -> [String] {
-        let arrayOfTrim = [
-                                     Trim.S3.rawValue,
-                                     Trim.S6.rawValue,
-                                     Trim.I3.rawValue,
-                                     Trim.I6.rawValue ]
-        return arrayOfTrim
-}
+    
+    static func orderIdentifiers() -> [String] {
+        var identifiers: [String] = []
+        for trim in Trim.allCases {
+            identifiers.append(trim.rawValue)
+        }
+        return identifiers
+    }
 }

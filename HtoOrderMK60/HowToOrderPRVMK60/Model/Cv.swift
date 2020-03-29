@@ -45,24 +45,12 @@ enum Cv: String, CaseIterable  {
         case .I: return ""
         }
     }
-    static func getAllCv() -> [String] {
-        let arrayOfCv = [
-                        Cv.one.rawValue,
-                        Cv.two.rawValue,
-                        Cv.three.rawValue,
-                        Cv.four.rawValue,
-                        Cv.five.rawValue,
-                        Cv.six.rawValue,
-                        Cv.seven.rawValue,
-                        Cv.eight.rawValue,
-                        Cv.nine.rawValue,
-                        Cv.A.rawValue,
-                        Cv.B.rawValue,
-                        Cv.D.rawValue,
-                        Cv.F.rawValue,
-                        Cv.G.rawValue,
-                        Cv.I.rawValue ]
-        return arrayOfCv
+    static func orderIdentifiers() -> [String] {
+        var identifiers: [String] = []
+        for cv in Cv.allCases {
+            identifiers.append(cv.rawValue)
+        }
+        return identifiers
     }
     
 }

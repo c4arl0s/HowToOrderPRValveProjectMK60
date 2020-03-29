@@ -27,15 +27,12 @@ enum SeatMaterial: String, CaseIterable  {
         case .Y: return ""
         }
     }
-    static func getAllSeatMaterial() -> [String] {
-        let arrayOfSeatMaterial = [
-            SeatMaterial.A.rawValue,
-            SeatMaterial.B.rawValue,
-            SeatMaterial.V.rawValue,
-            SeatMaterial.W.rawValue,
-            SeatMaterial.X.rawValue,
-            SeatMaterial.Y.rawValue ]
-        return arrayOfSeatMaterial
+    static func orderIdentifiers() -> [String] {
+        var identifiers: [String] = []
+        for seatMaterial in SeatMaterial.allCases {
+            identifiers.append(seatMaterial.rawValue)
+        }
+        return identifiers
     }
 }
 

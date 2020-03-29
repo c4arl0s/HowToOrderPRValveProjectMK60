@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Endconnection: String  {
+enum Endconnection: String, CaseIterable  {
     case PT = "NPT"
     case BT = "BSPT"
     case BP = "BSPP"
@@ -31,16 +31,13 @@ enum Endconnection: String  {
         case .F3: return ""
         }
     }
-    static func getAllEndconnection() -> [String] {
-        
-        let arrayOfEndconnection = [ Endconnection.PT.rawValue,
-                              Endconnection.BT.rawValue,
-                              Endconnection.BP.rawValue,
-                              Endconnection.SW.rawValue,
-                              Endconnection.I5.rawValue,
-                              Endconnection.F5.rawValue,
-                              Endconnection.I3.rawValue,
-                              Endconnection.F3.rawValue ]
-        return arrayOfEndconnection
+
+    static func orderIdentifiers() -> [String] {
+        var identifiers: [String] = []
+        for endConnection in Endconnection.allCases {
+            identifiers.append(endConnection.rawValue)
+        }
+        return identifiers
     }
+    
 }
