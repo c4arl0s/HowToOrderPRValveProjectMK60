@@ -1,269 +1,64 @@
 # HowToOrderPressureReducingValve
 This Xcode project is created to  reduce efforts to construct and Order a Pressure Reducing Valve Model MK60 Jordan Valve.
 
-![Screen Shot 2019-12-31 at 12 48 48](https://user-images.githubusercontent.com/24994818/71631016-f2cb8100-2bcb-11ea-89d0-602e9932b125.png)
-
-![](https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/howToOrder.gif)
-
-<p align="center">
-    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/1.png" width="375">
-</p>
-
-<p align="center">
-    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/2.png" width="375">
-</p>
-
-
-<p align="center">
-    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/3.png" width="375">
-</p>
-
-
-<p align="center">
-    <img src="https://github.com/carlos-santiago-2017/HowToOrderPRValveProjectMK60/blob/master/delegate.png">
-</p>
-
-# FirstTableViewController.swift
-
-``` swift
-//
-//  FirstTableViewController.swift
-//  HowToOrderPRVMK60
-//
-//  Created by Carlos Santiago Cruz on 04/11/18.
-//  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
-//
-
-import UIKit
-
-class FirstTableViewController: UITableViewController, Delegate {
+1. [Part One: Server Details and Project Setup](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-one-server-details-and-project-setup)
+2. [Part Two: Project Planning](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-two-project-planning)
+3. [Part Three: Set up the Storyboard Workflow](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-three-set-up-the-storyboard-workflow)
+4. [Part Four: Add NetWorking Code](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-four-add-networking-code)
+5. [Part five: Categories](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-five-categories)
+   * [Basic Table SetUp](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--basic-table-setup)
+   * [Table view data source methods for CategoryTableViewController](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--table-view-data-source-methods-for-categorytableviewcontroller)
+6. [Part Six: Menu Items](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-six-menu-items)
+   * [Basic Table Setup](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--basic-table-setup-1)
+   * [table view data source methods for MenuTableViewController](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#table-view-data-source-methods-for-menutableviewcontroller)
+   * [Pass Menu Item Data to MenuItemDetailViewController](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--pass-menu-item-data-to-menuitemdetailviewcontroller)
+   * [Create a static let Property (shared) of Menu Controller](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--create-a-static-let-property-shared-of-menu-controller)
+   * [Now you can use that shared instance (comment or delete menuController instance)](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#now-you-can-use-that-shared-instance-comment-or-delete-menucontroller-instance)
+  
+7. [Part Seven: Menu Details](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-seven-menu-details)
+   * [Item Details Interface](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--item-details-interface)
+   * [Image View]()
+   * [Title and Price Labels]()
+   * [DetailText Label]()
+   * ["Add to Order" Button]()
+   * [Create Outlets and Display Data]()
+   * [Customize the button](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--customize-the-button)
+8. [Part Eight: View and Edit Order](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-eight-view-and-edit-order)
+    * [Display Order](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--display-order)
+    * [Create Order functionality](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#create-order-functionality)
+    * [Create the Order Property (to share the instance) in MenuController]()
+    * [Notify of Order Changes](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--notify-of-order-changes)
+    * [Update the Order Badges](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#--update-the-order-badges)
+    * [Add and Alert to verify the item before delete](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#add-an-alert-to-verify-the-item-to-delete)
+9. [Part Nine: Submit Order](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-nine-submit-order)
+    * [Add a submit button in OrderTableViewController](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#add-a-submit-button-in-ordertableviewcontroller)
+    * [Build OrderConfirmationViewController](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#build-orderconfirmationviewcontroller)ç
+    * [Important!!](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#important-)
+    * [Submit and Alert](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#submit-and-alert)
+10. [PART TEN: REQUEST IMAGES](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#part-ten-request-images)
+    * [Set the URL Cache Size]()
+    * [Add a Placeholder image]()
+    * [Request the right image]()
+    * [Images are too small - heightForRowAt]()
+11. [Project Extension - State Restoration](https://github.com/c4arl0s/RestaurantApp/blob/master/README.md#project-extension---state-restoration)  
+    * [Part 1. HANDLE THE ORDER]()
+      * [Add Data persistence for the Order]()
+      * [saveOrder]()
+      * [loadOrder]()
+      * [Save the order]()
+      * [Load the order]()
+    * [PART 2: OPT INTO STATE RESTORATION IN THE APPDELEGATE]()
+    * [PART 3: UPDATE THE STORYBOARD]()
+    * [PART 4: HANDLE VIEWCONTROLLER STATE]()
+      * [Preserve view controller state]()
+      * [Revisit MenuController]()
+      * [Provide Synchronous Data Accss]()
+      * [Persist Menu Items]()
+      * [Update View Controllers]()
+      * [Send a Notification on Completion of Fetch]()
+      * [Restore View Controller State]()
+      * [PART 5: TEST YOUR CODE]()
+      * [Simulate State Restoration]()
+      * [Analize the crash]()
+      * [Accommodate Timing of tue viewDidLoad() Call]()
     
-    var arrayToPass: [String] = []
-    var titleToPass: String = ""
-    var indexPathToPass: IndexPath!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        registerTableViewNIB()
-        addSomePaddingToTheTop()
-        automaticDimension()
-    }
-    
-    // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return HowToOrderValve.getAllCharacteristics().count
-    }
-    
-    func registerTableViewNIB(){
-        tableView.register(UINib(nibName: "CharacteristicTableViewCell", bundle: nil), forCellReuseIdentifier: "CharacteristicTableViewCell")
-    }
-    func addSomePaddingToTheTop() {
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
-    }
-    func automaticDimension(){
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 65
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CharacteristicTableViewCell", for: indexPath) as! CharacteristicTableViewCell
-        let characteristic = HowToOrderValve.getAllCharacteristics()[indexPath.row]
-        cell.characteristicLabel?.text = characteristic
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let indexPath = tableView.indexPathForSelectedRow!
-        let currentCell = tableView.cellForRow(at: indexPath)! as! CharacteristicTableViewCell
-        indexPathToPass = indexPath
-        switch indexPath {
-        case [0,0]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Model.getAllModels()
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        case [0,1]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Size.getAllSizes()
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        case [0,2]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = BodyMaterial.getAllMaterials()
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        case [0,3]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Endconnection.getAllEndconnection()
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        case [0,4]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Trim.getAllTrim()
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        case [0,5]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = SeatMaterial.getAllSeatMaterial()
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        case [0,6]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Cv.getAllCv()
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        default:
-            print("noneofThem")
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "goToChoose") {
-            let destinationViewController =
-                segue.destination as? HowToOrderPressureRegulatorValveTableViewController
-            destinationViewController?.passedArrayFromFTVC = arrayToPass
-            destinationViewController?.navigationItem.title = titleToPass
-            destinationViewController?.indexPathPassed = indexPathToPass
-            destinationViewController?.delegate = self
-        }
-    }
-    func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath) {
-        let cellFromIndexPathPassed = tableView.cellForRow(at: indexPathPassed)! as! CharacteristicTableViewCell
-        cellFromIndexPathPassed.optionLabel.text = dataToPass
-        self.tableView.reloadData()
-    }
-}
-```
-
-# CharacteristicTableViewCell.swift
-
-``` swift
-//
-//  CharacteristicTableViewCell.swift
-//  HowToOrderPRVMK60
-//
-//  Created by Carlos Santiago Cruz on 04/11/18.
-//  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
-//
-import Foundation
-import UIKit
-
-class CharacteristicTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var characteristicLabel: UILabel!
-    @IBOutlet weak var optionLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-}
-```
-
-# HowToOrderPressureRegulatorValveTableViewController.swift
-
-``` swift
-//
-//  HowToOrderPressureRegulatorValveTableViewController.swift
-//  HowToOrderPRVMK60
-//
-//  Created by Carlos Santiago Cruz on 04/10/18.
-//  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
-//
-import Foundation
-import UIKit
-
-protocol Delegate {
-    func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath)
-}
-
-class HowToOrderPressureRegulatorValveTableViewController: UITableViewController {
-    var passedArrayFromFTVC: [String] = []
-    var delegate: Delegate?
-    var indexPathPassed: IndexPath!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return passedArrayFromFTVC.count
-        
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView
-                   .dequeueReusableCell(withIdentifier: "cellSelection",
-                                        for: indexPath) as! OptionTableViewCell
-        let optionSelected = passedArrayFromFTVC[indexPath.row]
-        cell.showsReorderControl = true
-        cell.textLabel?.text = optionSelected
-        cell.detailTextLabel?.text = optionSelected
-        return cell
-    }
-
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .none
-        }
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let optionSelected = passedArrayFromFTVC[indexPath.row]
-        self.delegate?.updateOptionLabel(dataToPass: optionSelected, indexPathPassed: indexPathPassed)
-        if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .checkmark
-        }
-        
-    }
-
-}
-```
-
-# OptionTableViewCell.swift
-
-``` swift
-//
-//  OptionTableViewCell.swift
-//  HowToOrderPRVMK60
-//
-//  Created by Carlos Santiago Cruz on 04/11/18.
-//  Copyright © 2018 Carlos Santiago Cruz. All rights reserved.
-//
-
-import UIKit
-
-protocol OptionTableViewCellDelegate {
-    func updateOptionLabel(data: String)
-}
-
-class OptionTableViewCell: UITableViewCell {
-    @IBOutlet weak var labelOption: UILabel!
-    var delegate: OptionTableViewCellDelegate?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.delegate?.updateOptionLabel(data: labelOption.text!)
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-}
-```
