@@ -26,27 +26,27 @@ enum Cv: String, CaseIterable  {
     case G = "115 (99,1)"
     case I = "200 (172)"
     
-    var feature: String {
+    var orderIdentifier: String {
         switch self {
-        case .one: return ""
-        case .two: return ""
-        case .three: return ""
-        case .four: return ""
-        case .five: return ""
-        case .six: return ""
-        case .seven: return ""
-        case .eight: return ""
-        case .nine: return ""
-        case .A: return ""
-        case .B: return ""
-        case .D: return ""
-        case .F: return ""
-        case .G: return ""
-        case .I: return ""
+        case .one: return "1"
+        case .two: return "2"
+        case .three: return "3"
+        case .four: return "4"
+        case .five: return "5"
+        case .six: return "6"
+        case .seven: return "7"
+        case .eight: return "8"
+        case .nine: return "9"
+        case .A: return "A"
+        case .B: return "B"
+        case .D: return "D"
+        case .F: return "F"
+        case .G: return "G"
+        case .I: return "I"
         }
     }
     static var orderIdentifiers: [String] {
-        var identifiers: [String] = []
+        var identifiers = [String]()
         for cv in Cv.allCases {
             identifiers.append(cv.rawValue)
         }

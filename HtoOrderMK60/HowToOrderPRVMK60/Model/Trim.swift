@@ -14,17 +14,17 @@ enum Trim: String, CaseIterable  {
     case I3 = "303SSF/IFE (1/2 inch - 2 inch CS/S6)"
     case I6 = "316SSF/IFE (1/2 inch - 2 inch CS/S6)"
     
-    var feature: String {
+    var orderIdentifier: String {
         switch self {
-        case .S3: return ""
-        case .S6: return ""
-        case .I3: return ""
-        case .I6: return ""
+        case .S3: return "S3"
+        case .S6: return "S6"
+        case .I3: return "I3"
+        case .I6: return "I6"
         }
     }
     
     static var orderIdentifiers: [String] {
-        var identifiers: [String] = []
+        var identifiers = [String]()
         for trim in Trim.allCases {
             identifiers.append(trim.rawValue)
         }

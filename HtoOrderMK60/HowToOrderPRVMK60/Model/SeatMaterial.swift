@@ -17,18 +17,18 @@ enum SeatMaterial: String, CaseIterable  {
     case X = "303SS/JOR/JIC"
     case Y = "316SS/JOR/JIC"
     
-    var feature: String {
+    var orderIdentifier: String {
         switch self {
-        case .A: return ""
-        case .B: return ""
-        case .V: return ""
-        case .W: return ""
-        case .X: return ""
-        case .Y: return ""
+        case .A: return "A"
+        case .B: return "B"
+        case .V: return "V"
+        case .W: return "W"
+        case .X: return "X"
+        case .Y: return "Y"
         }
     }
     static var orderIdentifiers: [String] {
-        var identifiers: [String] = []
+        var identifiers = [String]()
         for seatMaterial in SeatMaterial.allCases {
             identifiers.append(seatMaterial.rawValue)
         }

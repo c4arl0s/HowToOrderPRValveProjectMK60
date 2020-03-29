@@ -25,7 +25,7 @@ enum BodyMaterial: String, CaseIterable {
         }
     }
     static var orderIdentifiers: [String] {
-        var identifiers: [String] = []
+        var identifiers = [String]()
         for bodyMaterial in BodyMaterial.allCases {
             identifiers.append(bodyMaterial.rawValue)
         }

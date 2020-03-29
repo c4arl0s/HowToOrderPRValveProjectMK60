@@ -12,4 +12,4 @@ This Xcode project is created to  reduce efforts to construct and Order a Pressu
    * [Basic Table Setup]()
    * [table view data source methods for FirstTableViewController]()
    * [Pass Menu Item Data to HowToOrderPressureRegulatorValveTableViewController]()
-   * [Create a static let Property ()
+   * [Create a static let Propert]()

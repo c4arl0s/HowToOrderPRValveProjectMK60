@@ -19,21 +19,21 @@ enum Endconnection: String, CaseIterable  {
     case I3 = "300# IFE"
     case F3 = "300# FE (Except IFE)"
     
-    var feature: String {
+    var orderIdentifier: String {
         switch self {
-        case .PT: return ""
-        case .BT: return ""
-        case .BP: return ""
-        case .SW: return ""
-        case .I5: return ""
-        case .F5: return ""
-        case .I3: return ""
-        case .F3: return ""
+        case .PT: return "PT"
+        case .BT: return "BT"
+        case .BP: return "BP"
+        case .SW: return "SW"
+        case .I5: return "I5"
+        case .F5: return "F5"
+        case .I3: return "I3"
+        case .F3: return "F3"
         }
     }
 
     static var orderIdentifiers: [String] {
-        var identifiers: [String] = []
+        var identifiers = [String]()
         for endConnection in Endconnection.allCases {
             identifiers.append(endConnection.rawValue)
         }

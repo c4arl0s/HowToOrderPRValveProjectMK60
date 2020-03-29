@@ -25,7 +25,7 @@ enum Model: String, CaseIterable  {
     }
 
     static var orderIdentifiers: [String] {
-        var identifiers: [String] = []
+        var identifiers = [String]()
         for model in Model.allCases {
             identifiers.append(model.rawValue)
         }
