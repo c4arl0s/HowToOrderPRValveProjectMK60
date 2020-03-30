@@ -28,12 +28,12 @@ enum Diaphragm: String, CaseIterable {
     }
     
     static var orderIdentifiers: [String] {
-            var identifiers = [String]()
-            for diaphragm in Diaphragm.allCases {
-                identifiers.append(diaphragm.rawValue)
-            }
-            return identifiers
+        var identifiers = [String]()
+        for diaphragm in Diaphragm.allCases {
+            identifiers.append(diaphragm.rawValue)
         }
+        return identifiers
+    }
 }
 
 
