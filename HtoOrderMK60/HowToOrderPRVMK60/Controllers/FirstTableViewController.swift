@@ -92,6 +92,10 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
             titleToPass = currentCell.characteristicLabel.text!
             arrayToPass = MK60SpringRange.orderIdentifiers
             performSegue(withIdentifier: "goToChoose", sender: self)
+        case [0,8]:
+            titleToPass = currentCell.characteristicLabel.text!
+            arrayToPass = Diaphragm.orderIdentifiers
+            performSegue(withIdentifier: "goToChoose", sender: self)
         default:
             print("noneofThem")
         }
