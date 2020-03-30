@@ -18,6 +18,7 @@
 		8F3A27A4216723510019A579 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A27A3216723510019A579 /* Model.swift */; };
 		8F3A27A62167240F0019A579 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A27A52167240F0019A579 /* Size.swift */; };
 		8F3A27A8216724F30019A579 /* BodyMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A27A7216724F30019A579 /* BodyMaterial.swift */; };
+		8F70ED5824312ED500493C61 /* MK60SpringRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70ED5724312ED500493C61 /* MK60SpringRange.swift */; };
 		8F75F27B21CE9EAD00BDD371 /* EndConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75F27A21CE9EAD00BDD371 /* EndConnection.swift */; };
 		8F75F27D21CEA43400BDD371 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75F27C21CEA43400BDD371 /* Trim.swift */; };
 		8F75F27F21CEA60E00BDD371 /* SeatMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75F27E21CEA60E00BDD371 /* SeatMaterial.swift */; };
@@ -64,6 +65,7 @@
 		8F3A27A3216723510019A579 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		8F3A27A52167240F0019A579 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		8F3A27A7216724F30019A579 /* BodyMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyMaterial.swift; sourceTree = "<group>"; };
+		8F70ED5724312ED500493C61 /* MK60SpringRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MK60SpringRange.swift; sourceTree = "<group>"; };
 		8F75F27A21CE9EAD00BDD371 /* EndConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndConnection.swift; sourceTree = "<group>"; };
 		8F75F27C21CEA43400BDD371 /* Trim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trim.swift; sourceTree = "<group>"; };
 		8F75F27E21CEA60E00BDD371 /* SeatMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatMaterial.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				8F75F27C21CEA43400BDD371 /* Trim.swift */,
 				8F75F27E21CEA60E00BDD371 /* SeatMaterial.swift */,
 				8F75F28021CEA80500BDD371 /* Cv.swift */,
+				8F70ED5724312ED500493C61 /* MK60SpringRange.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				8F3A279E216721C70019A579 /* HowToOrderPressureRegulatorValveTableViewController.swift in Sources */,
 				8FDC9A16218FA61300B0F509 /* OptionTableViewCell.swift in Sources */,
 				8F75F27D21CEA43400BDD371 /* Trim.swift in Sources */,
+				8F70ED5824312ED500493C61 /* MK60SpringRange.swift in Sources */,
 				8F75F27F21CEA60E00BDD371 /* SeatMaterial.swift in Sources */,
 				8F3A277021671F9D0019A579 /* AppDelegate.swift in Sources */,
 				8F3A27A4216723510019A579 /* Model.swift in Sources */,

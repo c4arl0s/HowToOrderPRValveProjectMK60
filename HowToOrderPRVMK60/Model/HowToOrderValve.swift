@@ -16,9 +16,14 @@ struct HowToOrderValve {
     var trim: Trim
     var seatMaterial: SeatMaterial
     var cv: Cv
-    var mk60SpringRange: MK60SpringRange
     
-    init(model: Model, size: Size, bodyMaterial: BodyMaterial, endConnection: Endconnection, trim: Trim, seatMaterial: SeatMaterial, cv: Cv, mk60SpringRange: MK60SpringRange ) {
+    init(model: Model,
+         size: Size,
+         bodyMaterial: BodyMaterial,
+         endConnection: Endconnection,
+         trim: Trim,
+         seatMaterial: SeatMaterial,
+         cv: Cv ) {
         self.model = model
         self.size = size
         self.bodyMaterial = bodyMaterial
@@ -26,7 +31,6 @@ struct HowToOrderValve {
         self.trim = trim
         self.seatMaterial = seatMaterial
         self.cv = cv
-        self.mk60SpringRange = mk60SpringRange
     }
     static func getAllCharacteristics() -> [String] {
         let arrayOfCharacteriscs = [ "Model",

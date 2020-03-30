@@ -62,35 +62,31 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
         switch indexPath {
         case [0,0]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Model.orderIdentifiers
+            arrayToPass = Model.getAllModels()
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,1]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Size.orderIdentifiers
+            arrayToPass = Size.getAllSizes()
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,2]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = BodyMaterial.orderIdentifiers
+            arrayToPass = BodyMaterial.getAllMaterials()
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,3]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Endconnection.orderIdentifiers
+            arrayToPass = Endconnection.getAllEndconnection()
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,4]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Trim.orderIdentifiers
+            arrayToPass = Trim.getAllTrim()
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,5]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = SeatMaterial.orderIdentifiers
+            arrayToPass = SeatMaterial.getAllSeatMaterial()
             performSegue(withIdentifier: "goToChoose", sender: self)
         case [0,6]:
             titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = Cv.orderIdentifiers
-            performSegue(withIdentifier: "goToChoose", sender: self)
-        case [0,7]:
-            titleToPass = currentCell.characteristicLabel.text!
-            arrayToPass = MK60SpringRange.orderIdentifiers
+            arrayToPass = Cv.getAllCv()
             performSegue(withIdentifier: "goToChoose", sender: self)
         default:
             print("noneofThem")

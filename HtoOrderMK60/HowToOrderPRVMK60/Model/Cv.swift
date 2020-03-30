@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 enum Cv: String, CaseIterable  {
     case one = "0.21 (0,28)"
     case two = "0.42 (0,36)"
