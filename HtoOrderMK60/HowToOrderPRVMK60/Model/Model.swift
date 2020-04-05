@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum Model: String, CaseIterable  {
+enum Model: String, CaseIterable, Codable  {
     case standard60 = "Standard 60"
     case highPressure60HP = "High Pressure 60HP"
     case quickChange = "Quick Change 60QC"

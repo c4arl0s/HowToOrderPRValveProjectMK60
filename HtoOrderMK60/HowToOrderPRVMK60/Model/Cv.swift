@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Cv: String, CaseIterable  {
+enum Cv: String, CaseIterable, Codable  {
     case one = "0.21 (0,28)"
     case two = "0.42 (0,36)"
     case three = "0.84 (0,72)"

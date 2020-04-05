@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum Size: String, CaseIterable {
+enum Size: String, CaseIterable, Codable {
     case oneQuarter = "1/4 inch (DN8)"
     case ThreeOctave = "3/8 inch (DN10)"
     case half = "1/2 inch (DN15)"

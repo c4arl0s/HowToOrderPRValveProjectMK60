@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct HowToOrderValve {
+struct HowToOrderValve: Codable {
     var model: Model
     var size: Size
     var bodyMaterial: BodyMaterial
@@ -18,8 +18,9 @@ struct HowToOrderValve {
     var cv: Cv
     var mk60SpringRange: MK60SpringRange
     var diaphragm: Diaphragm
+    var actuator: Actuator
     
-    init(model: Model, size: Size, bodyMaterial: BodyMaterial, endConnection: Endconnection, trim: Trim, seatMaterial: SeatMaterial, cv: Cv, mk60SpringRange: MK60SpringRange, diaphragm: Diaphragm ) {
+    init(model: Model, size: Size, bodyMaterial: BodyMaterial, endConnection: Endconnection, trim: Trim, seatMaterial: SeatMaterial, cv: Cv, mk60SpringRange: MK60SpringRange, diaphragm: Diaphragm, actuator: Actuator ) {
         self.model = model
         self.size = size
         self.bodyMaterial = bodyMaterial
@@ -29,6 +30,7 @@ struct HowToOrderValve {
         self.cv = cv
         self.mk60SpringRange = mk60SpringRange
         self.diaphragm = diaphragm
+        self.actuator = actuator
     }
     static func getAllCharacteristics() -> [String] {
         let arrayOfCharacteriscs = [ "Model",

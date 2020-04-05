@@ -9,26 +9,26 @@
 import Foundation
 import UIKit
 
-enum Endconnection: String, CaseIterable  {
-    case PT = "NPT"
-    case BT = "BSPT"
-    case BP = "BSPP"
-    case SW = "FSW"
-    case I5 = "150# IFE"
-    case F5 = "150# FE (Except IFE)"
-    case I3 = "300# IFE"
-    case F3 = "300# FE (Except IFE)"
+enum Endconnection: String, CaseIterable, Codable  {
+    case NPT = "NPT"
+    case BSPT = "BSPT"
+    case BSPP = "BSPP"
+    case FSW = "FSW"
+    case IFE150 = "150# IFE"
+    case FE150 = "150# FE (Except IFE)"
+    case IFE300 = "300# IFE"
+    case FE300 = "300# FE (Except IFE)"
     
     var orderIdentifier: String {
         switch self {
-        case .PT: return "PT"
-        case .BT: return "BT"
-        case .BP: return "BP"
-        case .SW: return "SW"
-        case .I5: return "I5"
-        case .F5: return "F5"
-        case .I3: return "I3"
-        case .F3: return "F3"
+        case .NPT: return "PT"
+        case .BSPT: return "BT"
+        case .BSPP: return "BP"
+        case .FSW: return "SW"
+        case .IFE150: return "I5"
+        case .FE150: return "F5"
+        case .IFE300: return "I3"
+        case .FE300: return "F3"
         }
     }
 

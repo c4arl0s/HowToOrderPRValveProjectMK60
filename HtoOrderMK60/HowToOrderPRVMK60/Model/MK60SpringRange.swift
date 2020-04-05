@@ -8,13 +8,7 @@
 
 import Foundation
 
-enum SpringRange {
-    case MK60
-    case MK60HP
-    case MK61
-}
-
-enum MK60SpringRange: String, CaseIterable {
+enum MK60SpringRange: String, CaseIterable, Codable {
     case sixteen = "2-23 (0,14-1,6)"
     case thirtySeven = "10-38 (0,7-3)"
     case fiftySix = "20-55 (1-4)"

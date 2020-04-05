@@ -23,6 +23,7 @@
 		8F75F27D21CEA43400BDD371 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75F27C21CEA43400BDD371 /* Trim.swift */; };
 		8F75F27F21CEA60E00BDD371 /* SeatMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75F27E21CEA60E00BDD371 /* SeatMaterial.swift */; };
 		8F75F28121CEA80500BDD371 /* Cv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75F28021CEA80500BDD371 /* Cv.swift */; };
+		8FA0788D2439A2EA00F5F829 /* SpringRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA0788C2439A2EA00F5F829 /* SpringRange.swift */; };
 		8FC24900243276D800AFACC2 /* Diaphragm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC248FF243276D800AFACC2 /* Diaphragm.swift */; };
 		8FC2490224327C1F00AFACC2 /* Actuator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC2490124327C1F00AFACC2 /* Actuator.swift */; };
 		8FDC99CF218F3E9600B0F509 /* CharacteristicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */; };
@@ -72,6 +73,7 @@
 		8F75F27C21CEA43400BDD371 /* Trim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trim.swift; sourceTree = "<group>"; };
 		8F75F27E21CEA60E00BDD371 /* SeatMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatMaterial.swift; sourceTree = "<group>"; };
 		8F75F28021CEA80500BDD371 /* Cv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cv.swift; sourceTree = "<group>"; };
+		8FA0788C2439A2EA00F5F829 /* SpringRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringRange.swift; sourceTree = "<group>"; };
 		8FC248FF243276D800AFACC2 /* Diaphragm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diaphragm.swift; sourceTree = "<group>"; };
 		8FC2490124327C1F00AFACC2 /* Actuator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actuator.swift; sourceTree = "<group>"; };
 		8FDC99CD218F3E9600B0F509 /* CharacteristicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				8F75F27E21CEA60E00BDD371 /* SeatMaterial.swift */,
 				8F75F28021CEA80500BDD371 /* Cv.swift */,
 				8F70ED5724312ED500493C61 /* MK60SpringRange.swift */,
+				8FA0788C2439A2EA00F5F829 /* SpringRange.swift */,
 				8FC248FF243276D800AFACC2 /* Diaphragm.swift */,
 				8FC2490124327C1F00AFACC2 /* Actuator.swift */,
 			);
@@ -341,6 +344,7 @@
 				8F3A27A62167240F0019A579 /* Size.swift in Sources */,
 				8F75F28121CEA80500BDD371 /* Cv.swift in Sources */,
 				8FDC9A19218FDE0700B0F509 /* FirstTableViewController.swift in Sources */,
+				8FA0788D2439A2EA00F5F829 /* SpringRange.swift in Sources */,
 				8F3A279E216721C70019A579 /* HowToOrderPressureRegulatorValveTableViewController.swift in Sources */,
 				8FDC9A16218FA61300B0F509 /* OptionTableViewCell.swift in Sources */,
 				8F75F27D21CEA43400BDD371 /* Trim.swift in Sources */,

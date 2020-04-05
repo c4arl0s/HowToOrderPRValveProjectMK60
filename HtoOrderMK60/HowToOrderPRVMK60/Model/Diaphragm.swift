@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Diaphragm: String, CaseIterable {
+enum Diaphragm: String, CaseIterable, Codable {
     case sst316 = "316SST (1/4 inch – 2 inch only)"
     case viton = "Viton"
     case bunaN = "Buna-N (standard above 2 inch)"

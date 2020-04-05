@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-enum BodyMaterial: String, CaseIterable {
+enum BodyMaterial: String, CaseIterable, Codable {
     case ductilIron = "Ductil Iron"
     case bronze = "Bronze"
     case carbonSteel = "Carbon Steel"

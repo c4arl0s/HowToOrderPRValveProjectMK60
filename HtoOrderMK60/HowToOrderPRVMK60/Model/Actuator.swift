@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Actuator: String, CaseIterable {
+enum Actuator: String, CaseIterable, Codable {
     case DIforMetalDiagram = "DI for Metal Diaphragm (1/4 – 2 inch only)"
     case DIforElastomDiaphragm = "DI for Elastomer Diaphragm"
     case ss316forMetalDiaphgram = "316 for Metal Diaphragm"

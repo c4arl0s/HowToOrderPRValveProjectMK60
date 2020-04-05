@@ -9,7 +9,17 @@
 import UIKit
 
 class FirstTableViewController: UITableViewController, HowToOrderPressureRegulatorValveTableViewControllerDelegate {
-    
+    var model: Model?
+    var size: Size?
+    var bodyMaterial: BodyMaterial?
+    var endConnection: Endconnection?
+    var trim: Trim?
+    var seatMaterial: SeatMaterial?
+    var cv: Cv?
+    var springRange: SpringRange?
+    var diaphragm: Diaphragm?
+    var actuator: Actuator?
+
     var arrayToPass: [String] = []
     var titleToPass: String = ""
     var indexPathToPass: IndexPath!
@@ -118,6 +128,7 @@ class FirstTableViewController: UITableViewController, HowToOrderPressureRegulat
     func updateOptionLabel(dataToPass: String, indexPathPassed: IndexPath) {
         let cellFromIndexPathPassed = tableView.cellForRow(at: indexPathPassed)! as! CharacteristicTableViewCell
         cellFromIndexPathPassed.optionLabel.text = dataToPass
+
         self.tableView.reloadData()
     }
 }

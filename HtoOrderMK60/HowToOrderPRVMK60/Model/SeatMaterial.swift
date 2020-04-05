@@ -9,22 +9,22 @@
 import Foundation
 
 
-enum SeatMaterial: String, CaseIterable  {
-    case A = "303SST (1/4 inch – 2 inch)"
-    case B = "316SST (1/4 inch – 2 inch)"
-    case V = "303SS/Jorcote"
-    case W = "316SS/Jorcote"
-    case X = "303SS/JOR/JIC"
-    case Y = "316SS/JOR/JIC"
+enum SeatMaterial: String, CaseIterable, Codable  {
+    case SST303 = "303SST (1/4 inch – 2 inch)"
+    case SST316 = "316SST (1/4 inch – 2 inch)"
+    case SS303Jorcote = "303SS/Jorcote"
+    case SS316Jorcote = "316SS/Jorcote"
+    case SS303JorJic = "303SS/JOR/JIC"
+    case SS316JorJic = "316SS/JOR/JIC"
     
     var orderIdentifier: String {
         switch self {
-        case .A: return "A"
-        case .B: return "B"
-        case .V: return "V"
-        case .W: return "W"
-        case .X: return "X"
-        case .Y: return "Y"
+        case .SST303: return "A"
+        case .SST316: return "B"
+        case .SS303Jorcote: return "V"
+        case .SS316Jorcote: return "W"
+        case .SS303JorJic: return "X"
+        case .SS316JorJic: return "Y"
         }
     }
     static var orderIdentifiers: [String] {
